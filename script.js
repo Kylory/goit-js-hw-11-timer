@@ -1,10 +1,3 @@
-const refs = {
-    days: document.querySelector('#timer-1 [data-value="days"]'),
-    hours: document.querySelector('#timer-1 [data-value="hours"]'),
-    mins: document.querySelector('#timer-1 [data-value="mins"]'),
-    secs: document.querySelector('#timer-1 [data-value="secs"]'),
-};
-
 class CountdownTimer {
     constructor(selector, targetDate) {
         this.selector = selector;
