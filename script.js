@@ -13,14 +13,14 @@ class CountdownTimer {
 
   start() {
     setInterval(() => {
-      const time = Date.parse(timer.targetDate) - Date.now();
+      const countdownTime = Date.parse(this.targetDate) - Date.now();
 
-      const days = Math.floor(time / (1000 * 60 * 60 * 24));
+      const days = Math.floor(countdownTime / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
-        (time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (countdownTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      const mins = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((time % (1000 * 60)) / 1000);
+      const mins = Math.floor((countdownTime % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((countdownTime % (1000 * 60)) / 1000);
 
       refs.days.textContent = String(days).padStart(2, 0);
       refs.hours.textContent = String(hours).padStart(2, 0);
